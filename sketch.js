@@ -18,6 +18,7 @@ let appelBreedte = 20;
 let mandjeY = 650 ;
 let Breedjemandje = 100 ; 
 let Hoogtemandje = 15 ; 
+let score = 0 ; 
 
 
 /* ********************************************* */
@@ -46,6 +47,8 @@ function draw() {
   background('black');
 
   // mandjeX = MouseX;
+fill(255,255,255)
+  text(score = 'score', 1200 ,25 ); 
 
   // teken appel
   noStroke();         // geen lijntje om de vorm heen
@@ -59,13 +62,18 @@ function draw() {
   if( mouseX < 10){ mouseX = 20 
 
   }
-  if (mouseX > 1190){
-    mouseX = 1180
+  if (mouseX > 1200){
+    mouseX = 1199
   }
   if(appelY > 800){
     appelY = random(-1000,-200) ;
     appelX = random(50,1200) ;
   }
-
-
+if ( appelY > mandjeY - 100 && 
+  appelY < mandjeY + 100 &&
+  appelX > mouseX - 100 &&
+  appelX < mouseX + 100 ) {
+    score = score + 1 ; 
+    
+  }
 }
