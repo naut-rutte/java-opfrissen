@@ -14,11 +14,10 @@
 /* ********************************************* */
 let appelX = 600; // x-positie van appel
 let appelY = 50;  // y-positie van appel
-let appelBreedte = 20;
-let mandjeX = mouseX ; 
+let appelBreedte = 20; 
 let mandjeY = 650 ;
-let breedjemandje = 100 ; 
-let hoogtemandje = 15 ; 
+let Breedjemandje = 100 ; 
+let Hoogtemandje = 15 ; 
 
 
 /* ********************************************* */
@@ -33,6 +32,8 @@ let hoogtemandje = 15 ;
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
+  // mandjeX = MouseX; 
+  
 }
 
 /**
@@ -44,11 +45,27 @@ function draw() {
   // teken achtergrond
   background('black');
 
+  // mandjeX = MouseX;
+
   // teken appel
   noStroke();         // geen lijntje om de vorm heen
   fill(255, 0, 0)     // vulkleur wordt rood
   rect(appelX, appelY, appelBreedte, appelBreedte);
-  appelY= appelY + 5; 
+  appelY= appelY + 1; 
+  noStroke();
+  fill(165,42,42)
+  rect(mouseX,mandjeY,Breedjemandje,Hoogtemandje);
+  
+  if( mouseX < 10){ mouseX = 20 
+
+  }
+  if (mouseX > 1190){
+    mouseX = 1180
+  }
+  if(appelY > 800){
+    appelY = random(-1000,-200) ;
+    appelX = random(50,1200) ;
+  }
 
 
 }

@@ -5,8 +5,7 @@ Deze opdracht is bedoeld om je kennis van en vaardigheden in JavaScript op te fr
 Hulpmiddelen:
 - [Syntaxblad JavaScript en P5js](/syntaxblad-javascript.pdf)
 - [KhanAcademy](https://www.khanacademy.org/computing/computer-programming)
-- [P5js](https://p5js.org/reference/)
-
+- [P5js](https://p5js.org/referencfunction)
 ### De hele opdracht in één keer:
 Maak op dezelfde wijze als in de 4e klas een klein spelletje waarbij het de bedoeling is dat je zoveel mogelijk appels in een mandje vangt. Het mandje kun je met behulp van de muis onderaan het scherm naar links en rechts bewegen. Er mogen maximaal 3 appels tegelijk op het scherm zijn.
 Gegevens van appels die gevangen of gemist zijn, mogen niet in het geheugen blijven staan. Maar naar eigen inzicht gebruik van if, for en/of arrays, op dezelfde manier waarop je in de 4e klas de game hebt gemaakt. Maak het spel evt. mooier met een plaatjes van fruit, een mandje.
