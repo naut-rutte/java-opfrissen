@@ -19,6 +19,7 @@ let mandjeY = 650 ;
 let Breedjemandje = 100 ; 
 let Hoogtemandje = 15 ; 
 let score = 0 ; 
+let Appelraaktmandje = false; 
 
 
 /* ********************************************* */
@@ -34,7 +35,7 @@ function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
   // mandjeX = MouseX; 
-  
+   
 }
 
 /**
@@ -48,7 +49,7 @@ function draw() {
 
   // mandjeX = MouseX;
 fill(255,255,255)
-  text(score = 'score', 1200 ,25 ); 
+  text('score =' + score , 1200 ,25 ); 
 
   // teken appel
   noStroke();         // geen lijntje om de vorm heen
@@ -59,21 +60,32 @@ fill(255,255,255)
   fill(165,42,42)
   rect(mouseX,mandjeY,Breedjemandje,Hoogtemandje);
   
-  if( mouseX < 10){ mouseX = 20 
-
+  if( mouseX < 10){ 
+    mouseX = 20 
   }
   if (mouseX > 1200){
     mouseX = 1199
   }
-  if(appelY > 800){
+  if(appelY > 800 ){
     appelY = random(-1000,-200) ;
     appelX = random(50,1200) ;
   }
-if ( appelY > mandjeY - 100 && 
-  appelY < mandjeY + 100 &&
-  appelX > mouseX - 100 &&
-  appelX < mouseX + 100 ) {
+  if(appelY > mandjeY - 1 && 
+    appelY < mandjeY + 1
+  ){
+    appelY = random(-1000,-200) ;
+    appelX = random(50,1200) ;
+  }
+ if ( appelY > mandjeY - 2 &&
+  appelY < mandjeY + 2 && 
+  appelX > mouseX - 50 &&
+  appelX < mouseX + 50 ) {
+    Appelraaktmandje = true ;
+    console.log( 'is het waar ' + Appelraaktmandje ) 
+  }  
+  if (Appelraaktmandje === true ){
     score = score + 1 ; 
-    
+    Appelraaktmandje = false ; 
+    console.log( 'score = ' + score )
   }
 }
