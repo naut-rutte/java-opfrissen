@@ -66,16 +66,14 @@ fill(255,255,255)
   if (mouseX > 1200){
     mouseX = 1199
   }
-  if(appelY > 800 ){
+  if(appelY > 800 || appelY > mandjeY - 1 && 
+    appelY < mandjeY + 1 &&
+    appelX > mouseX - 50 &&
+  appelX < mouseX + 50){
     appelY = random(-1000,-200) ;
     appelX = random(50,1200) ;
   }
-  if(appelY > mandjeY - 1 && 
-    appelY < mandjeY + 1
-  ){
-    appelY = random(-1000,-200) ;
-    appelX = random(50,1200) ;
-  }
+
  if ( appelY > mandjeY - 2 &&
   appelY < mandjeY + 2 && 
   appelX > mouseX - 50 &&
