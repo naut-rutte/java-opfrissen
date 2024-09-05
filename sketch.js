@@ -35,6 +35,7 @@ function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
   // mandjeX = MouseX; 
+//  achtergrond= achtergrond.jpg ; 
    
 }
 
@@ -55,7 +56,7 @@ fill(255,255,255)
   noStroke();         // geen lijntje om de vorm heen
   fill(255, 0, 0)     // vulkleur wordt rood
   rect(appelX, appelY, appelBreedte, appelBreedte);
-  appelY= appelY + 1; 
+  appelY= appelY + 5; 
   noStroke();
   fill(165,42,42)
   rect(mouseX,mandjeY,Breedjemandje,Hoogtemandje);
@@ -66,18 +67,18 @@ fill(255,255,255)
   if (mouseX > 1200){
     mouseX = 1199
   }
-  if(appelY > 800 || appelY > mandjeY - 1 && 
-    appelY < mandjeY + 1 &&
-    appelX > mouseX - 50 &&
-  appelX < mouseX + 50){
+  if(appelY > 800 || appelY > mandjeY - 5&& 
+    appelY < mandjeY + 5 &&
+    appelX > mouseX - 75 &&
+    appelX < mouseX + 75){
     appelY = random(-1000,-200) ;
     appelX = random(50,1200) ;
   }
 
- if ( appelY > mandjeY - 2 &&
-  appelY < mandjeY + 2 && 
-  appelX > mouseX - 50 &&
-  appelX < mouseX + 50 ) {
+ if ( appelY > mandjeY - 10 &&
+  appelY < mandjeY + 10 && 
+  appelX > mouseX - 75 &&
+  appelX < mouseX + 75 ) {
     Appelraaktmandje = true ;
     console.log( 'is het waar ' + Appelraaktmandje ) 
   }  
